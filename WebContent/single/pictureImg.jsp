@@ -14,12 +14,12 @@ String path = application.getRealPath("/")+"upload/";
 String filename = null;
 
 MultipartRequest multi = new MultipartRequest(request, path, 10*1024*1024, "utf-8" );
-filename = multi.getFilesystemName("picture");
+filename = multi.getFilesystemName("picture"); // upload 폴더에 저장 OK
 %>
 <script>
 const img = opener.document.querySelector("#pic")
 img.src = "<%=request.getContextPath()%>/upload/<%=filename%>"
-opener.f.picture.value="<%=filename%>"
+opener.document.f.picture.value="<%=filename%>"
 self.close();
 </script>
 </body>

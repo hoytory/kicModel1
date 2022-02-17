@@ -1,0 +1,36 @@
+db server 
+1) db : x
+
+2) 회원가입 자료 입력 한다
+url :  memberPro.jsp
+dao.insertMember(request);
+public int insertMember(HttpServletRequest  request) 
+
+3) db :x
+
+4)
+로그인 자료 입력 : 
+   url (Action) : loginPro.jsp
+Member mem  = md.selectOne(id);
+---Member selectOne(String id)
+
+5)
+url : memberUpdate.jsp  
+Member selectOne(String id)
+value="<%=mem.getPicture()%>"
+
+6) 수정자료 입력 :
+url : memberUpdatePro.jsp
+Member mem  = md.selectOne(login); 
+int num = memberUpdate(mem);
+
+7) 회원탈퇴 : x
+
+8) 탈퇴를 위한 비밀번호 확인 
+Member mb = md.selectOne(login);
+int num = md.deleteMember(login);
+
+9) 이미지 사진 등록 (upload)  : x
+
+10)  pictureForm에  자료 입력  " x
+

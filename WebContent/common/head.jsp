@@ -56,7 +56,7 @@ color: aqua;
 			<% } else { //login OK
 				%>
 				<li class="nav-item"><a class="nav-link"
-					href="<%=request.getContextPath() %>/view/member/memberUpdate.jsp"><%=memid  %>: 회원가입</a></li>
+					href="<%=request.getContextPath() %>/view/member/memberUpdate.jsp"><%=memid  %>: 회원정보수정</a></li>
 				<li class="nav-item"><a class="nav-link"
 					href="<%=request.getContextPath() %>/view/member/logout.jsp">로그아웃</a></li>
 				<li class="nav-item"><a class="nav-link"

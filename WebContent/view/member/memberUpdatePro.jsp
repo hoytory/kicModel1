@@ -22,23 +22,22 @@ if (login == null || login.trim().equals(""))
 alert("로그인이 필요 합니다 ")
 location.href="<%=request.getContextPath()%>/view/member/loginForm.jsp";
 </script>
-<% } else  { %>
-<%
-MemberDao md = new MemberDao();
-//id가 없으면 null, 있으면 mem return
-Member mem  = md.selectOne(login); 
-%>
+<% } else  {  
+String email = request.getParameter("email");
+String tel = request.getParameter("tel");
+String pass = request.getParameter("pass");
 
-<hr>
-	<div class="container" style="width:80%; ">
-		<h2   id="center">회원정보수정</h2>
-		<form action="<%= request.getContextPath() %>/view/member/memberPro.jsp" 
-		method="post" name="f">
-		
+String picture = request.getParameter("picture");  //1
+
+MemberDao md = new MemberDao();
+Member mem  = md.selectOne(login); 
+
 // member에 email, tel을 저장 
 mem.setEmail(email);
 mem.setTel(tel);
+mem.setPicture(picture);  //2
 
+//System.out.println(mem); //3 수정된 이미지 이름 저장
 
 if (mem.getPass().equals(pass) ) {
 	
@@ -46,7 +45,7 @@ if (mem.getPass().equals(pass) ) {
 	msg = "회원 정보가 수정 되었습니다";
 	url = request.getContextPath()+"/view/main.jsp";
 }
-                
+
 
 }
 %>

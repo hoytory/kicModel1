@@ -1,0 +1,62 @@
+
+client
+
+1) 회원가입 
+   url : memberInput.jsp  :  해당하는 html 보낸다
+
+2) 회원가입 자료 입력 한다 : submit 
+   url (action) : memberPro.jsp
+  data : 입력 자료 
+    :   request에서 자료 읽어서 service 작업을 한다 
+        name="id"......... : <form>
+        pstmt.setString(1, request.getParameter("id"));
+    해당하는 
+     html (main.jsp) :입력 불가 main
+     /view/member/loginForm.jsp";}  : 입력 ok
+
+
+3) 로그인 : 
+   url : loginForm.jsp  : 자료 x
+   서버는 loginForm.jsp 보낸다
+
+4) 로그인 자료 입력 : 
+   url (Action) : loginPro.jsp
+   data   : id, pass   처리 (request)
+   String id = request.getParameter("id");
+   해당하는 html (main.jsp)   : 로그인 ok
+  /view/member/loginForm.jsp";}  : 로그인 불가 
+
+
+5) update 
+   url : memberUpdate.jsp : data X;
+   member자료(memberDao)  읽어서 form 에  value로 저장 
+   value="<%=mem.getTel()%>
+   
+6) 수정자료 입력 :
+   url : memberUpdatePro.jsp
+   login X : loginForm.jsp
+   수정 되었으면 : main.jsp
+   비밀번호가 틀리면 : memberUpdate.jsp
+   
+   
+7) 회원 탈퇴  : 
+   url : deleteForm.jsp
+   login 확인 함 
+   
+8) 탈퇴를 위한 비밀번호 확인 
+   url : deletePro.jsp
+
+/// 팝업 window   
+9) 이미지 사진 등록 (upload)
+   /upload 폴더를 만든다
+   window.open('pictureForm.jsp')
+   enctype="multipart/form-data"   
+
+10) pictureForm에  자료 입력 
+   url : pictureImg.jsp
+   lib.cos.jar
+   
+
+   
+
+   
