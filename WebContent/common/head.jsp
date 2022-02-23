@@ -39,7 +39,8 @@ color: aqua;
 <body>
 	<nav class="navbar navbar-expand-lg bg-light navbar-light">
 		<!-- Brand -->
-		<a class="navbar-brand" href="#"><img src="<%=request.getContextPath() %>/image/logo.png"
+		<a class="navbar-brand" href="<%=request.getContextPath() %>/view/main.jsp">
+		<img src="<%=request.getContextPath() %>/image/logo.png"
 			  style="margin-right: 20%;"></a>
 
 		<!-- Links -->
@@ -64,13 +65,13 @@ color: aqua;
 			
 			<% } %>
 			<li class="nav-item"><a
-				href="<%=request.getContextPath() %>/board/list?boardid=1"
+				href="<%=request.getContextPath() %>/view/board/list.jsp?boardid=1"
 				class="nav-link">공지사항</a></li>
 			<li class="nav-item"><a
-				href="<%=request.getContextPath() %>/board/list?boardid=2"
+				href="<%=request.getContextPath() %>/view/board/list.jsp?boardid=2"
 				class="nav-link">자유게시판</a></li>
 			<li class="nav-item"><a
-				href="<%=request.getContextPath() %>/board/list?boardid=3"
+				href="<%=request.getContextPath() %>/view/board/list.jsp?boardid=3"
 				class="nav-link">QnA</a></li>
 
 

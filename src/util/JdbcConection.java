@@ -16,8 +16,8 @@ public class JdbcConection {
 	public static Connection getConnection() {
 		Connection con = null;
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-		String userId = "kic";
-		String password = "1111";
+		String userId = "tory01";
+		String password = "tlsg2031";
 		
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
